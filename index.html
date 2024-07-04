@@ -81,7 +81,7 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/MAPF/result5.gif" alt="" width="400" height="300">
+              <img class="img-fluid" src="img/portfolio/MAPF/result5.gif" alt="" width="300" height="200">
             </a>
             <div class="portfolio-caption">
               <h4>Multi Agent Path Finding</h4>
@@ -318,42 +318,60 @@
                               <p></p><br>
                               <h4>Brief Description</h4>
                               <p></p>
-                              <p>This report presents the development and implementation of a sophisticated multi-agent pathfinding (MAPF) system, designed to navigate multiple agents—specifically kings on a chessboard—through a complex environment without collisions. The project leverages advanced algorithmic techniques within a constrained computational framework to address the challenge of sequential agent movements on a grid with restricted areas. Utilizing a modified A* search algorithm, extended to include temporal and spatial dimensions (space-time A*), and integrating Conflict-Based Search (CBS) for conflict resolution, this system ensures optimal and collision-free navigation.</p>
-                              <p>The system handles the intricacies of MAPF by enforcing strict movement rules that prevent agents from moving into restricted cells and from ending movements adjacent to each other. The core of the solution involves dynamic constraint generation and management, facilitating the detection and resolution of both vertex and edge type collisions.</p>
-                              <p>Extensive testing on various scenarios confirms the robustness and efficiency of the planner. The algorithm successfully computes viable paths for all agents or accurately detects scenarios where no path exists. This project not only showcases a technical solution to a complex problem but also contributes to the broader field of robotics and automated systems by providing a scalable model for multi-agent navigation in constrained environments.</p>
+                              <p>This report presents the development and implementation of a sophisticated multi-agent pathfinding (MAPF) system, designed to 
+                                navigate multiple agents—specifically kings on a chessboard—through a complex environment without collisions. The project leverages 
+                                advanced algorithmic techniques within a constrained computational framework to address the challenge of sequential agent movements 
+                                on a grid with restricted areas. Utilizing a modified A* search algorithm, extended to include temporal and spatial dimensions 
+                                (space-time A*), and integrating Conflict-Based Search (CBS) for conflict resolution, this system ensures optimal and collision-free navigation.</p>
+                              <p>The system handles the intricacies of MAPF by enforcing strict movement rules that prevent agents from moving into restricted cells
+                                 and from ending movements adjacent to each other. The core of the solution involves dynamic constraint generation and management, 
+                                 facilitating the detection and resolution of both vertex and edge type collisions.</p>
+                              <p>Extensive testing on various scenarios confirms the robustness and efficiency of the planner. The algorithm successfully computes viable
+                                 paths for all agents or accurately detects scenarios where no path exists. This project not only showcases a technical solution to a complex 
+                                 problem but also contributes to the broader field of robotics and automated systems by providing a scalable model for multi-agent navigation 
+                                 in constrained environments.</p>
+
                               <h4>Algorithm Design and Approach</h4>
-                              <p>The core of my solution utilizes a space-time A* search algorithm, modified to incorporate constraints that prevent collisions both in terms of position and time.</p>
-                              <p>• Space-Time A* Algorithm: This involved modifying the traditional A* algorithm to consider time as a dimension, allowing the planner to handle dynamic constraints across different timesteps.</p>
-                              <p>• Conflict-Based Search (CBS): I further enhanced the solution by integrating CBS, an approach that is optimal and complete for solving multi-agent pathfinding problems. CBS works by detecting conflicts among paths and resolving them by imposing constraints that split the search space. The algorithm mainly identifies two types of collisions:</p>
-                              <p>o “Vertex Type”: A vertex type collision occurs when two or more agents occupy the same cell at the same timestep. For example, consider a scenario where:</p>
+                              <p>The core of my solution utilizes a space-time A* search algorithm, modified to incorporate constraints that prevent collisions both in terms
+                                 of position and time.</p>
+                              <p>• Space-Time A* Algorithm: This involved modifying the traditional A* algorithm to consider time as a dimension, allowing the planner to handle 
+                                dynamic constraints across different timesteps.</p>
+                              <p>• Conflict-Based Search (CBS): I further enhanced the solution by integrating CBS, an approach that is optimal and complete for solving 
+                                multi-agent pathfinding problems. CBS works by detecting conflicts among paths and resolving them by imposing constraints that split the 
+                                search space. The algorithm mainly identifies two types of collisions:</p>
+
+                              <p>o “Vertex Type”: A vertex type collision occurs when two or more agents occupy the same cell at the same timestep. For example, consider 
+                                a scenario where:</p>
                               <p>▪ King A is supposed to move to cell (x, y) at timestep t.</p>
                               <p>▪ Simultaneously, Agent B also moves to cell (x, y) at timestep t.</p>
-                              <p>This results in a vertex collision at cell (x, y) at timestep t, which must be resolved to ensure that the agents can proceed without interference.</p>
-                              <p>o “Edge type”: Edge type collisions, also known as swap collisions, occur when two agents attempt to traverse the edge between two cells in opposite directions simultaneously. In essence, they "pass" each other in the grid, resulting in a collision. For instance:</p>
+                              <p>This results in a vertex collision at cell (x, y) at timestep t, which must be resolved to ensure that the agents can proceed without 
+                                interference.</p>
+
+                              <p>o “Edge type”: Edge type collisions, also known as swap collisions, occur when two agents attempt to traverse the edge between two cells 
+                                in opposite directions simultaneously. In essence, they "pass" each other in the grid, resulting in a collision. For instance:</p>
                               <p>▪ Agent A moves from cell (x, y) to cell (x+1, y) at timestep t.</p>
                               <p>▪ At the same time, Agent B moves from cell (x+1, y) to cell (x, y) at timestep t.</p>
-                              <p>This results in an edge collision between the paths of Agent A and Agent B between timesteps t−1 and t, and it must be resolved to avoid a conflict in the paths.</p>
+                              <p>This results in an edge collision between the paths of Agent A and Agent B between timesteps t−1 and t, and it must be resolved to avoid a 
+                                conflict in the paths.</p>
+
                               <h4>Managing Collisions</h4>
-                              <p>To manage these collisions, strategies like CBS use a two-level search. The high level of the search builds a constraint tree where each node represents a set of constraints derived from detected collisions. When a collision is detected, it is resolved by creating constraints that prevent at least one of the conflicting moves, thereby branching into new nodes in the search tree.</p>
-                              <p>For vertex collisions, the constraint might involve preventing one or more agents from entering the conflicting cell at the specific timestep. For edge collisions, the constraint might prevent one or both of the agents from making their respective moves at the specified timestep.</p>
-                              <p>Both types of collisions and their resolutions are central to ensuring that the path-finding algorithm can find viable paths for all agents without interference, thus guaranteeing that the solution is not only feasible but also optimal in terms of path length and time.</p>
-                              <h4>Implementation Details</h4>
-                              <p>The implementation was divided into several Python modules:</p>
-                              <p>• main.py: Orchestrates the overall execution and interaction between different components.</p>
-                              <p>• utils.py: Provides utility functions such as heuristic calculations and constraint management.</p>
-                              <p>• low_level_planner.py and main_planner.py: Handle the core logic of the A* algorithm modified for space-time search and the CBS strategy, respectively.</p>
-                              <p>• animation.py: Optional component used for visualizing the movements of the kings on the chessboard.</p>
-                              <h4>Running the Multi-Agent Pathfinding Code</h4>
-                              <p>To operate the code:</p>
-                              <p>• Navigate to the directory containing the code.</p>
-                              <p>• Install required packages using: pip install -r requirements.txt</p>
-                              <p>• Execute: python main.py</p>
-                              <p>• Modify the path of the files to run the code on different test cases.</p>
+                              <p>To manage these collisions, strategies like CBS use a two-level search. The high level of the search builds a constraint tree where each node 
+                                represents a set of constraints derived from detected collisions. When a collision is detected, it is resolved by creating constraints that 
+                                prevent at least one of the conflicting moves, thereby branching into new nodes in the search tree.</p>
+                              <p>For vertex collisions, the constraint might involve preventing one or more agents from entering the conflicting cell at the specific timestep. 
+                                For edge collisions, the constraint might prevent one or both of the agents from making their respective moves at the specified timestep.</p>
+                              <p>Both types of collisions and their resolutions are central to ensuring that the path-finding algorithm can find viable paths for all agents without 
+                                interference, thus guaranteeing that the solution is not only feasible but also optimal in terms of path length and time.</p>
+                              
                               <h4>Results and Conclusions</h4>
-                              <p>The developed planner successfully met the requirements outlined in the problem statement. It was able to compute paths for the kings or detect the absence of viable paths (if present) within the stipulated time frame.</p>
-                              <p>This project not only highlighted my technical skills in algorithm design and optimization but also reinforced my ability to apply theoretical concepts to practical, real-world problems.</p>
+                              <p>The developed planner successfully met the requirements outlined in the problem statement. It was able to compute paths for the kings or detect the 
+                                absence of viable paths (if present) within the stipulated time frame.</p>
+                              <img class="img-fluid" src="img/portfolio/MAPF/result5.gif" alt="Result GIF" width="400" height="300">
+                              <p>Figure 1: Visualization of the multi-agent pathfinding results</p>
+                              <p>This project not only highlighted my technical skills in algorithm design and optimization but also reinforced my ability to apply theoretical concepts 
+                                to practical, real-world problems.</p>
                               <ul class="list-inline">
-                                  <p class="item-intro text-muted"> <a class="boxed" href="https://github.com/jasdeepbajaj/MAPF"><font color="red"><b>Current Status and Source code here</b></font></a></p>
+                                  <p class="item-intro text-muted"> <a class="boxed" href="https://github.com/jasdeepbajaj/Multi-Agent-Path-Finding"><font color="red"><b>Github Page</b></font></a></p>
                                   <li>Date: April 2024</li>
                               </ul>
                               <button class="btn btn-primary" data-dismiss="modal" type="button">
@@ -366,6 +384,7 @@
           </div>
       </div>
     </div>
+
 
     <!-- Healer Baxter -->
     <div class="portfolio-modal modal fade" id="healerbaxter" tabindex="-1" role="dialog" aria-hidden="true">
