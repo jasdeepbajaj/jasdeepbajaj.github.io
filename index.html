@@ -91,17 +91,17 @@
 
           <!-- Project2 -->
           <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#healerbaxter">
+            <a class="portfolio-link" data-toggle="modal" href="#PlanningAndControl-CARLA">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/healer_baxter/healer.gif" alt="" width="400" height="300">
+              <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/result-gif.gif" alt="" width="400" height="300">
             </a>
             <div class="portfolio-caption">
-              <h4>Healer Baxter</h4>
-              <p class="text-muted">Deep Learning | CV | Motion Planning<br>Baxter Robot play the piano based on detected human emotion</p>
+              <h4>Planning and Control of Autonomous Vehicle in CARLA Simulator</h4>
+              <p class="text-muted">Autonomous Driving | CARLA | Vehicle Control | Python | A*</p>
             </div>
           </div>
 
@@ -386,76 +386,246 @@
     </div>
 
 
-    <!-- Healer Baxter -->
-    <div class="portfolio-modal modal fade" id="healerbaxter" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
-              </div>
+    <!-- MEEN 689 Project -->
+    <div class="portfolio-modal modal fade" id="PlanningAndControl-CARLA" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8 mx-auto">
-                  <div class="modal-body">
-                    <!-- Project Details Go Here -->
-                    <h3 class="text-uppercase">Healer Baxter</h3>
-                    <a class="boxed">Deep Learning</a>&ensp;<a class="boxed">Tensorflow</a>&ensp;<a class="boxed">Python</a>&ensp;<a class="boxed">Computer Vision</a>&ensp;<a class="boxed">Motion Planning</a>
-                    <p></p>
-                    <h4>Brief Description</h4>       
-                  	<p>This project aims to use deep learning and manipulation platform to train a two-armed robot to play the piano based on the human emotion.</p>
-                  	<p></p>
-                    <h4>Motivation</h4>       
-                  	<p>We live in an era in which communication seems simpler than any times, a friend is only one text away or one video chat away. Although communication may be easier and faster, people still feel lonely and depression rates have largely increased. Inspired by this circumstance, this project is to design a system that would enable the Baxter Robot to detect the negative emotion of its master and play songs on the piano using both hands to help him/her get rid of the bad feelings.</p>
-                    <p></p>
-                    <h4>Emotion Detection</h4>
-                    <h5>1. Data Description</h5> 
-                    <p>The data consists of 48x48 pixel grayscale images of faces. The faces have been automatically registered so that the face is more or less centered and occupies about the same amount of space in each image. The datasets are composed of 28,709 training examples
-                        and 3,589 testing examples. The training samples are then divided into two sets namely; Training Set and Validation Set. Training set samples composed of 80% of the original dataset samples and 20% of the samples are specified for validation. </p>
-                    <img class="img-fluid d-block mx-auto" src="img/portfolio/healer_baxter/data.png" alt="">
-                    <p></p>
-                    <h5>2. Data Augmentationg</h5> 
-                    <p>In order to avoid overfitting and improve
-                      recognition accuracy, the following transforms are perfomed on each image:
-                      a. Rescale (1. / 255)
-                      B. Rotation (30)
-                      b. Shear (0.3)
-                      c. Zoom (0.3)
-                      d. shift(width:0.4,height:0.4)
-                      e. Flip (horizontal)</p>
-                    <p></p>
-                    <h5>3. Proposed CNN Model</h5>       
-                  	<p>The CNN Model I built takes a 48*48 pixels grayscale image as input. This model is composed of 5 convolutional layers, each followed with a max pooling layer, and 2 fully connected layers. I
-                        classified images through softmax activation function at the last layer (output layer). The
-                      output layer consists of 5 neurons corresponding to 5
-                      emotional labels: Angry, Happy, Neutral, Sad and Surprise. </p>
-                    <p></p>
-                    <img class="img-fluid d-block mx-auto" src="img/portfolio/healer_baxter/CNN_ARC.png" alt="">
-                    <p></p>
-                  	<h5>Emotion Detection Demo</h5> 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/s_xAZkpSfBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <h4>Piano Playing</h4>
-                    <p>The detected emotion would be written in a text file using basic pyhton I/O function. The piano playing node keep reading this text file and when the emotion "sad" is detected and written in the file, baxter would start playing the piano</p>
-                    <h5>Locate keys using AprilTags</h5> 
-                    <p>Use pose infomation of the two apriltags in left_arm frame to compute the poses of keys in the baxter base frame</p>
-                    <img class="img-fluid d-block mx-auto" src="img/portfolio/healer_baxter/piano.png" alt="">
-                    <h5>Piano Playing Demo</h5> 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lJ78-UlrxD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <ul class="list-inline">
-                    <p><a class="boxed" href="https://github.com/mushenghe/HealerBaxter"><font color="red"><b>Github Page</b> </font></a></p>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h3 class="text-uppercase">Planning and Control of an Autonomous Driving Vehicle in CARLA Simulator</h3>
+                  <a class="boxed">Autonomous Driving</a>&ensp;<a class="boxed">Vehicle Control</a>&ensp;<a class="boxed">CARLA</a>
+                  <p></p>
+                  <h4>Abstract</h4>
+                  <p>This project delves into the development of a sophisticated vehicle control system implemented in the CARLA simulation environment. The system integrates both longitudinal and lateral control mechanisms to navigate a vehicle accurately through predefined waypoints in a simulated urban landscape. The primary objective is to create a comprehensive control system that ensures precise vehicle control by managing speed, acceleration, and steering. This system incorporates PID controllers for longitudinal and lateral control, facilitating smooth navigation through turns and straight paths. Key components include a global route planning mechanism that efficiently calculates the optimal path between waypoints and algorithms for precise control. Operating within the CARLA simulation platform, this project aims to validate and demonstrate the efficiency of the control system in a realistic urban setting. Through this endeavor, the project seeks to contribute to the advancement of autonomous vehicle technology by showcasing a robust control system capable of navigating urban environments effectively. The successful implementation of this system signifies a significant stride toward enhancing autonomous vehicle capabilities in real-world urban transportation scenarios.</p>
+                  <p></p>
+                  <h4>Introduction</h4>
+                  <h5>1. Project Overview</h5> 
+                  <p>The project involves developing a vehicle control system within the CARLA simulation environment. It incorporates longitudinal and lateral control mechanisms along with route planning to navigate a vehicle through predefined waypoints. The system aims to demonstrate efficient and accurate vehicle control in a simulated urban environment.</p>
+                  <h5>2. Purpose</h5>
+                  <p>The primary purpose is to create a comprehensive control system that orchestrates both longitudinal (speed and acceleration) and lateral (steering) control of a vehicle. This system should exhibit smooth navigation and adherence to a defined path while considering the dynamic environment. This system aims to showcase efficient route planning and precise vehicle control.</p>
+                  <h5>3. Goals of the Project</h5>
+                  <ul>
+                    <li>Route Planning: Develop and implement a reliable global route planner using the A* algorithm to compute optimal paths based on randomly selected start and goal locations in the CARLA environment.</li>
+                    <li>Precise Vehicle Control: Integrate sophisticated planning algorithms and control mechanisms seamlessly into CARLA’s simulation platform for cohesive execution and validation.</li>
+                    <li>Waypoint Following using PID and Pure Pursuit Controller: Implement a PID-based longitudinal controller for speed regulation and a Pure Pursuit algorithm for precise lateral control (steering). Enable the vehicle to accurately follow generated waypoints while maintaining appropriate speed and smooth steering adjustments.</li>
+                    <li>Performance Evaluation of Planner and Controller in Simulated Environment: Develop and apply comprehensive evaluation metrics to assess the performance of the planner and controllers within CARLA’s simulated environment. Conduct thorough testing to evaluate path accuracy, control precision, and overall system reliability. Iterate and refine the system based on performance evaluations to enhance efficiency and accuracy within a controlled setting.</li>
+                  </ul>
+                  <p></p>
+                  <h4>Code Overview</h4>
+                  <h5>1. Purpose of Each Import and Library</h5>
+                  <ul>
+                    <li>CARLA Python API: Provides access to CARLA functionalities, enabling interaction with the simulator environment.</li>
+                    <li>Network: Used for graph representation and manipulation, essential for constructing the road network and performing route planning.</li>
+                    <li>PID Controller Module: Utilizes the Pure Pursuit algorithm for lateral control, calculating steering angles.</li>
+                    <li>Math Libraries: Utilized for mathematical calculations related to control signal generation, distance calculations, and waypoint transformations.</li>
+                  </ul>
+                  <h5>2. Description of the Main Function and Its Components</h5>
+                  <ul>
+                    <li>Global Route Planner: Constructs a road network topology using CARLA waypoints and converts it into a graph representation. Employs the A* search algorithm to trace a route from the starting point to the destination.</li>
+                    <li>Longitudinal Controller: Responsible for controlling the vehicle’s speed, incorporating a PID controller that computes throttle and brake signals to achieve and maintain the desired speed.</li>
+                    <li>Lateral Controller (Pure Pursuit): Computes steering angles based on the Pure Pursuit algorithm, selecting target waypoints and calculating steering angles to guide the vehicle along the planned route.</li>
+                    <li>Utility Functions: Support the main components by generating control signals, calculating distances between waypoints, and facilitating mathematical operations essential for vehicle control.</li>
+                  </ul>
+                  <p></p>
+                  <h4>Project Components</h4>
+                  <h5>1. Global Route Planner Module</h5>
+                  <p>Purpose: Create a topological representation of the road network using the CARLA waypoints. Construct a graph-based representation allowing for efficient route planning.</p>
+                  <p>Functions:
+                    <ul>
+                      <li>Build Road Network: Converts CARLA waypoints into a graph structure, creating nodes and edges that represent the road layout.</li>
+                      <li>A* Search Algorithm: Implements the A* search algorithm to find the shortest path between the starting and ending waypoints.</li>
                     </ul>
-                    <button class="btn btn-primary" data-dismiss="modal" type="button">
-                      <i class="fas fa-times"></i>
-                      Close Project</button>
-                      
-                  </div>
+                  </p>
+                  <h5>2. Longitudinal Controller Module</h5>
+                  <p>Purpose: Manages the vehicle’s longitudinal motion, focusing on speed control through a PID controller.</p>
+                  <p>Functions:
+                    <ul>
+                      <li>PID Controller: Computes throttle and brake signals to maintain a set speed, ensuring smooth acceleration and deceleration.</li>
+                      <li>Speed Regulation: Adjusts the vehicle’s speed based on the desired velocity and current speed feedback.</li>
+                    </ul>
+                  </p>
+                  <h5>3. Lateral Controller Module</h5>
+                  <p>Purpose: Controls the vehicle’s lateral motion by determining steering angles necessary to follow the planned route.</p>
+                  <p>Functions:
+                    <ul>
+                      <li>Pure Pursuit Algorithm: Implements the Pure Pursuit algorithm to calculate steering angles based on the target waypoints.</li>
+                      <li>Target Waypoint Selection: Identifies the appropriate waypoints and calculates the steering angles required to navigate the vehicle along the desired path.</li>
+                    </ul>
+                  </p>
+                  <h5>4. Utility Functions Module</h5>
+                  <p>Purpose: Provides support functions and calculations required by other modules for seamless operation.</p>
+                  <p>Functions:
+                    <ul>
+                      <li>Control Signal Generation: Generates control signals such as throttle, brake, and steering angles required for vehicle control.</li>
+                      <li>Distance Calculations: Computes distances between waypoints and assists in determining the vehicle’s position within the environment.</li>
+                      <li>Mathematical Operations: Performs necessary mathematical operations, aiding in waypoint transformations and other calculations needed for control and navigation.</li>
+                    </ul>
+                  </p>
+                  <p></p>
+                  <h4>Functionality and Implementation</h4>
+                  <h5>1. Global Route Planner (global_route_planner.py)</h5>
+                  <p>Purpose: Provides a high-level route plan by building a topology and a graph representing the road map.</p>
+                  <p>Implementation:
+                    <ul>
+                      <li>GlobalRoutePlanner class initializes with a map and a sampling resolution, building a topology and graph in its constructor.</li>
+                      <li>trace_route method generates a route trace from an origin to a destination using the path search and turn decision functions.</li>
+                      <li>_build_topology extracts the road segments, waypoints, and paths from the map.</li>
+                      <li>_build_graph constructs a networkx graph representing the world map based on topology.</li>
+                      <li>_find_loose_ends identifies and adds unconnected road segments to the graph representation.</li>
+                      <li>_lane_change_link adds zero-cost links in the graph to represent availability for lane changes.</li>
+                      <li>_path_search utilizes A* search with a distance heuristic to find the shortest path between two waypoints.</li>
+                      <li>_turn_decision determines the appropriate turn decision (straight, left, right) based on edges and waypoints.</li>
+                    </ul>
+                  </p>
+                  <h5>2. Lateral Controller (lateral_controller.py)</h5>
+                  <p>Purpose: Implements the Pure Pursuit Controller for lateral control.</p>
+                  <p>Implementation:
+                    <ul>
+                      <li>PurePursuitController class initializes with the vehicle’s wheelbase (L) and a gain for calculating the lookahead distance (Kdd).</li>
+                      <li>calc_steering_angle calculates the steering angle based on alpha (angular difference) and lookahead distance.</li>
+                      <li>get_target_wp_index finds the index of the target waypoint in a list based on vehicle location and waypoints.</li>
+                      <li>get_lookahead_dist calculates the lookahead distance based on vehicle speed and target waypoint index.</li>
+                    </ul>
+                  </p>
+                  <h5>3. Longitudinal Controller (longitudinal_controller.py)</h5>
+                  <p>Purpose: Implements the PID Longitudinal Controller for vehicle speed control.</p>
+                  <p>Implementation:
+                    <ul>
+                      <li>get_speed retrieves the speed of a vehicle.</li>
+                      <li>PIDLongitudinalController class initializes with PID gains and buffers for error handling.</li>
+                      <li>run_step executes a step of PID control based on target speed and current speed.</li>
+                      <li>_pid_control calculates the PID control action based on proportional, integral, and derivative error terms.</li>
+                    </ul>
+                  </p>
+                  <h5>4. Utils (utils.py)</h5>
+                  <p>Purpose: Contains utility functions used across modules.</p>
+                  <p>Implementation:
+                    <ul>
+                      <li>find_dist_veh calculates the distance between a vehicle location and a target.</li>
+                      <li>get_speed retrieves the speed of a vehicle.</li>
+                      <li>vector computes the unit vector from one location to another.</li>
+                      <li>control_signal generates control signals for a vehicle using lateral and longitudinal controllers.</li>
+                    </ul>
+                  </p>
+                  <p></p>
+                  <h4>Parameters and Configurations</h4>
+                  <h5>1. Global Route Planner Parameters</h5>
+                  <p>Waypoint Resolution: Determines the distance between consecutive waypoints. Higher resolution leads to more waypoints and potentially more precise paths, but can increase computational load.</p>
+                  <h5>2. Pure Pursuit Controller Parameters</h5>
+                  <p>Lookahead Distance: Determines how far ahead the controller looks for the target waypoint. Increasing this distance can result in smoother, more gradual steering adjustments but may reduce responsiveness to sharp turns.</p>
+                  <h5>3. PID Longitudinal Controller Parameters</h5>
+                  <p>Proportional, Integral, and Derivative Gains (P, I, D): These gains affect how much weight is given to the current error, accumulated error, and rate of change of error in the control signal. Adjusting these gains alters the controller’s response—increasing P can make it more reactive, while too much D might induce oscillations.</p>
+                  <h5>4. General Parameters</h5>
+                  <p>Vehicle Speed Limit: Defines the maximum speed the vehicle should achieve. Lower limits can slow down the vehicle’s overall movement, while higher limits might cause safety issues or instability at curves or intersections.</p>
+                  <h5>5. Effects of Changing Parameters</h5>
+                  <p>Performance vs. Accuracy: Changing resolution, distance thresholds, or lookahead distances can affect the trade-off between computational performance and navigation accuracy. Adjusting speed limits, or control gains, can impact the vehicle’s stability, and safety margins. Parameters like lookahead distance and PID gains can influence how quickly the vehicle responds to changes in the environment or waypoints. Changing parameters affecting the number of waypoints or simulation step size can impact computational resources required for planning and control.</p>
+                  <p></p>
+                  <h4>CARLA Simulation</h4>
+                  <h5>1. Description and Role</h5>
+                  <p>Carla is an open-source simulator designed for autonomous driving research. Its primary role in projects involving autonomous vehicles is to provide a realistic and configurable environment for testing algorithms, training models, and evaluating the performance of various autonomous driving systems. Carla offers a 3D simulation environment that replicates real-world scenarios, including urban, suburban, and highway settings. It simulates sensor data, such as cameras, lidar, radar, GPS, and depth sensors, enabling developers to test and validate their algorithms in a virtual environment before deploying them in the real world. This simulation platform is pivotal in the development and validation of autonomous driving algorithms.</p>
+                  <h5>2. Carla Environment Setup and Usage</h5>
+                  <p>Configuring Carla involves setting up the simulation environment, selecting maps, defining vehicle models, configuring sensor suites, and defining traffic and weather conditions. Developers can use Carla’s Python API to interact with the simulation environment programmatically. The code interacts with Carla through its API to spawn vehicles, pedestrians, and other objects, set weather conditions, define traffic rules, and control the ego vehicle. It uses Carla’s functions and classes to retrieve sensor data, control vehicle movement, and simulate real-world scenarios.</p>
+                  <h5>3. Significance of Spawning Points, Maps, and Vehicles</h5>
+                  <p>Spawning Points: Determine initial positions of vehicles, pedestrians, and other objects within the map. Essential for setting up scenarios and defining starting conditions for testing different algorithms. Maps: Carla provides various maps representing diverse urban, suburban, and highway environments. Choosing a map affects the scenarios and road layouts available for testing algorithms. Vehicles: Carla allows spawning different types of vehicles with customizable attributes such as speed, behavior, and sensor configurations. Vital for simulating traffic scenarios, interactions between vehicles, and testing autonomous driving algorithms in various environments.</p>
+                  <h5>4. Significance within the Simulation</h5>
+                  <p>Realistic Scenario Testing: Carla’s realistic environment enables testing algorithms in scenarios like traffic congestion, diverse weather conditions, and complex road layouts. Algorithm Validation: Developers can validate perception, planning, and control algorithms in a safe and controlled environment before real-world deployment. Training and Evaluation: Carla allows for training machine learning models using simulated data and evaluating their performance under different conditions, enhancing the development of robust autonomous systems.</p>
+                  <p></p>
+                  <h4>Algorithms Used</h4>
+                  <h5>1. A* Algorithm (Planner)</h5>
+                  <p>The A* algorithm is a pathfinding algorithm widely used in robotics and game development for finding the shortest path between nodes in a graph. It operates by exploring nodes in a way that minimizes the total cost of the path.</p>
+                  <p>Mathematical Explanation:
+                    <ul>
+                      <li>Heuristic Function: A* uses a heuristic function f(n) = g(n) + h(n) to estimate the total cost from the start node to the goal node through the current node n. g(n) is the cost of the path from the start node to node n and h(n) is the heuristic (estimated) cost from node n to the goal node.</li>
+                      <li>Open and Closed Sets: A* maintains two lists: the open set (nodes to be evaluated) and the closed set (nodes already evaluated).</li>
+                      <li>Algorithm Steps: Start with the initial node and add it to the open set. Continue by choosing the node with the lowest f value, exploring its neighbors, updating their g and f values, and moving the current node to the closed set. Terminate when the goal node is reached or when no path is available.</li>
+                    </ul>
+                  </p>
+                  <h5>2. PID Longitudinal Controller</h5>
+                  <p>The Proportional-Integral-Derivative (PID) controller is a widely used feedback control mechanism. The longitudinal (speed) controller maintains a desired velocity by adjusting the throttle or braking of the vehicle.</p>
+                  <p>Mathematical Explanation:
+                    <ul>
+                      <li>PID Equation: The control signal u(t) at time t is calculated using the equation u(t) = Kp · Error + Ki · ΣError + Kd · d(Error)/dt where Kp, Ki, and Kd are the proportional, integral, and derivative gains, respectively.</li>
+                      <li>Controller Actions: Includes proportional action responding to the current error, integral action accumulating past errors, and derivative action predicting future errors based on their rate of change.</li>
+                    </ul>
+                  </p>
+                  <h5>3. Pure Pursuit Lateral Controller</h5>
+                  <p>The Pure Pursuit algorithm guides a vehicle to follow a desired path by computing the steering angle needed to reach a lookahead point on that path.</p>
+                  <p>Mathematical Explanation:
+                    <ul>
+                      <li>Algorithm Steps: Includes finding the lookahead point on the planned path, determining the steering angle based on the vehicle’s position relative to this point, and adjusting the steering angle to direct the vehicle towards the lookahead point.</li>
+                      <li>Steering Angle Calculation: The steering angle δ is calculated using trigonometry, considering the vehicle’s wheelbase L, the distance ld between the vehicle’s rear axle and the lookahead point, and the angle α between the vehicle’s heading direction and the line to the lookahead point. The equation for the steering angle is: δ = tan^−1(2L sin(α)/ld)</li>
+                    </ul>
+                  </p>
+                  <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/pure_pursuit-1.jpg" alt="Pure Pursuit in Action" width="400" height="300">
+                  <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/pure_pursuit-2.jpg" alt="Pure Pursuit Derivation" width="400" height="300">
+                  <p>Operation and Interaction in the Code:
+                    <ul>
+                      <li>A* Planner: Generates the optimal path based on the map and the goal, providing waypoints for the vehicle to follow.</li>
+                      <li>Longitudinal and Pure Pursuit Controllers: These controllers receive waypoints from the planner and adjust vehicle speed and steering angle, respectively, to follow the desired path.</li>
+                    </ul>
+                  </p>
+                  <p>Control Signals’ Significance:
+                    <ul>
+                      <li>Speed Control Signal: Regulates the vehicle’s velocity to adhere to the planned path and avoid overshooting or lagging.</li>
+                      <li>Steering Control Signal: Directs the vehicle along the planned path by adjusting the steering angle based on the lookahead point, ensuring smooth and accurate trajectory tracking.</li>
+                    </ul>
+                  </p>
+                  <h5>4. Speed control during turns</h5>
+                  <p>The code uses the curvature radius (R) to determine if the vehicle is on a straight road or a turn. It does this by calculating: R = ld/(2L sin(α)). The absolute value of R is compared against a straight road threshold. If R is greater than the threshold, the vehicle is on a straight road. Otherwise, it’s identified as being on a turn.</p>
+                  <p>Behavior on a Straight Road: On a straight road, vehicles typically accelerate to maintain a consistent speed. The absence of curves or bends allows the vehicle to optimize its velocity, ensuring a smoother and more efficient movement along the path.</p>
+                  <p>Behavior on a Turn: When navigating a turn, vehicles typically undergo a reduction in speed to ensure safe and stable maneuvering. This alteration in speed is essential to manage the change in direction without compromising safety or stability.</p>
+                  <p></p>
+                  <h4>Execution and Output</h4>
+                  <h5>1. Main Execution Flow</h5>
+                  <ul>
+                    <li>Initialization: Load the map and environment (like CARLA) and initialize the vehicle’s starting position.</li>
+                    <li>Path Planning: Use the A* algorithm to generate a path from the vehicle’s current position to the desired destination. Obtain a series of waypoints that form the planned path.</li>
+                    <li>Control Loop: Start a control loop that executes at regular intervals (e.g., every few milliseconds).</li>
+                    <li>Vehicle Control: Use the PID longitudinal controller to adjust the vehicle’s speed based on the waypoints’ locations. Use the Pure Pursuit controller to determine steering angles and keep the vehicle on the planned path.</li>
+                  </ul>
+                  <h5>2. Progression through Waypoints</h5>
+                  <p>The vehicle starts at a designated point and progresses through the waypoints provided by the planner. At each iteration of the control loop, the vehicle adjusts its speed and steering angle to move towards the next waypoint. The controllers ensure the vehicle adheres to the planned path by adjusting its behavior based on the current position, desired speed, and the lookahead point from the Pure Pursuit algorithm.</p>
+                  <p></p>
+                  <h4>Conclusion</h4>
+                  <p>Waypoint Generation and Projection: The ability to generate waypoints at a specific resolution and overlay them onto the simulation environment demonstrates a crucial foundational step. The comparison between the ground truth path and the actual path followed by the vehicle offers valuable insights into the accuracy and precision of the generated waypoints.</p>
+                  <p>A* Algorithm Path Generation: The successful implementation of the A* algorithm through the Global Route Planner signifies a robust planning mechanism. It’s pivotal in ensuring the system’s capability to plan feasible and optimal routes between arbitrary points. The accuracy of the generated paths showcases the effectiveness of this planning algorithm.</p>
+                  <p>Controller Implementation for Path Following: The successful implementation of controllers to guide the vehicle along the ground truth path from start to end signifies a critical milestone. The controllers’ ability to steer and control the vehicle’s speed along the planned trajectory demonstrates the system’s capability to execute planned routes accurately.</p>
+                  <p>Overall System Performance: The combined success in waypoint generation, path planning through the A* algorithm, and accurate path following with controllers presents a promising foundation for the autonomous driving system. The seamless integration of these components indicates a cohesive system architecture, capable of translating planned routes into actionable vehicle behavior within the simulation environment.</p>
+                  <p></p>
+                  <h4>Working in the CARLA Simulator</h4>
+                  <h5>1. Visualization of Path Generation Using A* Algorithm</h5>
+                  <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/A-star-in-work.jpg" alt="Plot of Waypoints with Route" width="400" height="300">
+                  <h5>2. Visualization of Vehicle in the CARLA Simulator</h5>
+                  <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/viz-str-line.jpg" alt="Illustration of the Vehicle in the Carla Simulator at a straight line" width="400" height="300">
+                  <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/viz - curved -line.jpg" alt="Illustration of the Vehicle in the Carla Simulator at a turn" width="400" height="300">
+                  <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/result-gif.gif" alt="Illustration of the Vehicle in action in CARLA Simulator" width="400" height="300">
+                  <p></p>
+                  <h4>Future Work and Scope of Improvement</h4>
+                  <ul>
+                    <li>Enhanced Perception: Improve sensor fusion techniques or use more advanced sensors to enhance perception capabilities and robustness.</li>
+                    <li>Adaptive Algorithms: Implement more adaptive or machine learning-based algorithms to handle dynamic environments and unpredictable scenarios.</li>
+                    <li>Behavioral Planning: Integrate more complex decision-making systems that account for higher-level behavioral planning, like handling complex intersections or traffic scenarios.</li>
+                    <li>Simulation and Testing: Conduct extensive simulations and real-world tests to refine algorithms, control strategies, and overall system performance under various conditions.</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
   
     <!-- Terminator -->
     <div class="portfolio-modal modal fade" id="terminator" tabindex="-1" role="dialog" aria-hidden="true">
