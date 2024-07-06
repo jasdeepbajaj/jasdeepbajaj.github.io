@@ -430,8 +430,9 @@
                   <h4 class="left-align">Abstract</h4>
                   <p class="justify-align">This project delves into the development of a sophisticated vehicle control system implemented in the CARLA simulation environment. The system integrates both longitudinal and lateral control mechanisms to navigate a vehicle accurately through predefined waypoints in a simulated urban landscape. The primary objective is to create a comprehensive control system that ensures precise vehicle control by managing speed, acceleration, and steering. This system incorporates PID controllers for longitudinal and lateral control, facilitating smooth navigation through turns and straight paths. Key components include a global route planning mechanism that efficiently calculates the optimal path between waypoints and algorithms for precise control. Operating within the CARLA simulation platform, this project aims to validate and demonstrate the efficiency of the control system in a realistic urban setting. Through this endeavor, the project seeks to contribute to the advancement of autonomous vehicle technology by showcasing a robust control system capable of navigating urban environments effectively. The successful implementation of this system signifies a significant stride toward enhancing autonomous vehicle capabilities in real-world urban transportation scenarios.</p>
                   <p></p>
-                  <h4 class="left-align">Introduction</h4>
-                  <h5 class="left-align">1. Project Overview</h5> 
+                  
+                  <h4 class="left-align">Introduction:</h4>
+                  <h5 class="left-align">1. Project Overview:</h5> 
                   <p class="justify-align">The project involves developing a vehicle control system within the CARLA simulation environment. It incorporates longitudinal and lateral control mechanisms along with route planning to navigate a vehicle through predefined waypoints. The system aims to demonstrate efficient and accurate vehicle control in a simulated urban environment.</p>
                   <h5 class="left-align">2. Purpose</h5>
                   <p class="justify-align">The primary purpose is to create a comprehensive control system that orchestrates both longitudinal (speed and acceleration) and lateral (steering) control of a vehicle. This system should exhibit smooth navigation and adherence to a defined path while considering the dynamic environment. This system aims to showcase efficient route planning and precise vehicle control.</p>
@@ -576,7 +577,9 @@
                   <p class="justify-align">The Proportional-Integral-Derivative (PID) controller is a widely used feedback control mechanism. The longitudinal (speed) controller maintains a desired velocity by adjusting the throttle or braking of the vehicle.</p>
                   <p class="justify-align">Mathematical Explanation:
                     <ul class="left-align">
-                      <li>PID Equation: The control signal u(t) at time t is calculated using the equation u(t) = Kp · Error + Ki · ΣError + Kd · d(Error)/dt where Kp, Ki, and Kd are the proportional, integral, and derivative gains, respectively.</li>
+                      <li>PID Equation: The control signal u(t) at time t is calculated using the equation </li>
+                      <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/PID-equation.png" alt="PID Equation" width="400" height="300">\
+                      <li> Kp, Ki, and Kd are the proportional, integral, and derivative gains, respectively.</li>
                       <li>Controller Actions: Includes proportional action responding to the current error, integral action accumulating past errors, and derivative action predicting future errors based on their rate of change.</li>
                     </ul>
                   </p>
@@ -585,7 +588,8 @@
                   <p class="justify-align">Mathematical Explanation:
                     <ul class="left-align">
                       <li>Algorithm Steps: Includes finding the lookahead point on the planned path, determining the steering angle based on the vehicle’s position relative to this point, and adjusting the steering angle to direct the vehicle towards the lookahead point.</li>
-                      <li>Steering Angle Calculation: The steering angle δ is calculated using trigonometry, considering the vehicle’s wheelbase L, the distance ld between the vehicle’s rear axle and the lookahead point, and the angle α between the vehicle’s heading direction and the line to the lookahead point. The equation for the steering angle is: δ = tan^−1(2L sin(α)/ld)</li>
+                      <li>Steering Angle Calculation: The steering angle δ is calculated using trigonometry, considering the vehicle’s wheelbase L, the distance ld between the vehicle’s rear axle and the lookahead point, and the angle α between the vehicle’s heading direction and the line to the lookahead point. The equation for the steering angle is: </li>
+                      <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/PUREPursuitequation.png" alt="Pure Pursuit Equation" width="400" height="300">
                     </ul>
                   </p>
                   <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/pure_pursuit-1.jpg" alt="Pure Pursuit in Action" width="400" height="300">
