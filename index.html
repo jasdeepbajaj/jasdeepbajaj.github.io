@@ -124,26 +124,26 @@
               <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/result-gif.gif" alt="" width="400" height="300">
             </a>
             <div class="portfolio-caption">
-              <h4>Planning and Control of Autonomous Vehicle in CARLA Simulator</h4>
-              <p class="text-muted">Autonomous Driving | CARLA | Vehicle Control | Python | A*</p>
+              <h4>Planning and Control of Autonomous Vehicle in CARLA Simulator </h4>
+              <p class="text-muted">Autonomous Driving | CARLA | Vehicle Control | Python | A* <br> Conquering Streets: Autonomous Navigation in CARLA!</p>
             </div>
           </div>
 
           <!-- Project3 -->
           <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#terminator">
+            <a class="portfolio-link" data-toggle="modal" href="#KinematicsPickPlace">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/mind_proj/nerfgun.gif" alt="" width="400" height="300">
+              <img class="img-fluid" src="img/portfolio/KUKA/kuka.png" alt="KUKA Robot" width="400" height="300">
             </a>
             <div class="portfolio-caption">
-              <h4>Terminator</h4>
-              <p class="text-muted">ROS | CV | Motion Planning<br>Baxter Robot pick up a nerf gun, locate a cup, pull the nerf gun trigger to shoot the cup when given a user input, and move to a final pose</p>
+              <h4>KUKA-Pick-and-Place-Robot</h4>
+              <p class="text-muted">Robotics | Forward Kinematics | Inverse Kinematics | ROS<br>Kuka KR210 robotic arm performing forward and inverse kinematics to pick an object from a shelf and place it into the trash.</p>
             </div>
-        </div>
+          </div>
 
             <!-- Project4 -->
             <div class="col-md-4 col-sm-6 portfolio-item">
@@ -577,9 +577,9 @@
                   <p class="justify-align">The Proportional-Integral-Derivative (PID) controller is a widely used feedback control mechanism. The longitudinal (speed) controller maintains a desired velocity by adjusting the throttle or braking of the vehicle.</p>
                   <p class="justify-align">Mathematical Explanation:
                     <ul class="left-align">
-                      <li>PID Equation: The control signal u(t) at time t is calculated using the equation </li>
-                      <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/PID-equation.png" alt="PID Equation" width="400" height="300">\
-                      <li> Kp, Ki, and Kd are the proportional, integral, and derivative gains, respectively.</li>
+                      <li>PID Equation: The control signal u(t) at time t is calculated using the equation: <br>
+                      <img class="img-fluid" src="img/portfolio/Planning-and-Control-CARLA/PID-equation.png" alt="PID Equation" width="400" height="300"> <br>
+                      where Kp, Ki, and Kd are the proportional, integral, and derivative gains, respectively.</li>
                       <li>Controller Actions: Includes proportional action responding to the current error, integral action accumulating past errors, and derivative action predicting future errors based on their rate of change.</li>
                     </ul>
                   </p>
@@ -658,9 +658,9 @@
     </div>
 
   
-    <!-- Terminator -->
-    <div class="portfolio-modal modal fade" id="terminator" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
+    <!-- Kinematics Pick & Place Project -->
+    <div class="portfolio-modal modal fade" id="KinematicsPickPlace" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
             <div class="lr">
@@ -672,33 +672,57 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h3 class="text-uppercase">Terminator</h3>
-                  <a class="boxed">ROS</a>&ensp;<a class="boxed">Baxter</a>&ensp;<a class="boxed">Python</a>&ensp;<a class="boxed">Computer Vision</a>&ensp;<a class="boxed">Motion Planning</a>
-                  <p></p>         
-                  <h4>Brief Description</h4>       
-                  <p>The goal of this project is to enable Baxter Robot pick up a nerf gun, locate a cup, pull the nerf gun trigger to shoot the cup when given a user input, and move to a final pose. </p>
-                  <h4>Action Sequence</h4> 
+                  <h3 class="text-uppercase center-align">KUKA-Pick-and-Place-Robot</h3>
+                  <p class="center-align"><a class="boxed">Robotics</a>&ensp;<a class="boxed">Inverse Kinematics</a>&ensp;<a class="boxed">Inverse Kinematics</a>&ensp;<a class="boxed">ROS</a>&ensp;<a class="boxed">Python</a></p>
                   <p></p>
-                  <p>1. Baxter goes through initial calibration and start up sequence. Arms are moved to an initial pose. <br>
-                  2. Baxter finds the nerf gun using an AprilTag and its left arm camera<br>
-                  3. Baxter moves its left arm to line up with the nerf gun and closes its gripper to pick up the gun<br>
-                  4. Once Baxter has the gun, it uses its left arm camera to find a cup using darknet<br>
-                  5. Baxter keeps moving its left arm until the cup is in the center of the image produced by the camera<br>
-                  6. Baxter moves its right arm to put its grippers around the nerf gun trigger<br>
-                  7. Baxter waits for a user input to confirm the firing of the gun<br>
-                  8. Baxter keeps waiting until the user tells it to fire<br>
-                  9. Baxter pulls the trigger using its right gripper<br>
-                  10. Baxter moves to a final pose right after shooting<br></p>
+                  
+                  <h4 class="left-align">Project Overview</h4>
+                  <p class="justify-align">The goal of this project is to write code to perform Forward and Inverse Kinematic for the Kuka KR210. This involves setting up the environment, performing kinematic analysis, deriving equations for individual joint angles, and implementing the kinematic code in `IK_server.py`.</p>
                   <p></p>
-                  <h4>Demo</h4>
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/2MRsNefNWmw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <p></p>
+                  
 
+                  <h4 class="left-align">Kinematic Analysis</h4>
+                  <h5 class="left-align">1. Sketch the Robot Arm</h5>
+                  <p class="justify-align">Label joints, define joint axes, label links, define common normals and reference frame origins, and add gripper frame.</p>
+                  <img class="img-fluid" src="img/portfolio/KUKA/fk_1.png" alt="Robot Arm Sketch">
+                  <img class="img-fluid" src="img/portfolio/KUKA/fk_2.png" alt="Joint Axes">
+                  <img class="img-fluid" src="img/portfolio/KUKA/fk_3.png" alt="Label Links">
+                  <img class="img-fluid" src="img/portfolio/KUKA/fk_4.png" alt="Common Normals and Frame Origins">
+                  <img class="img-fluid" src="img/portfolio/KUKA/fk_5.png" alt="Gripper Frame">
+
+                  <h5 class="left-align">2. Derive DH Parameters</h5>
+                  <p class="justify-align">Identify the DH parameters and create a DH parameter table:</p>
+                  <img class="img-fluid" src="img/portfolio/KUKA/dh_parameters.png" alt="DH Parameters">
+                  
+                  <img class="img-fluid" src="img/portfolio/KUKA/dh_table.png" alt="DH Table">
+
+                  <h5 class="left-align">3. Create Transformation Matrices</h5>
+                  <p class="justify-align">For each link, create individual transformation matrices and generate a generalized homogeneous transform between base_link and gripper_link using only end-effector pose:</p>
+                  <img class="img-fluid" src="img/portfolio/KUKA/dh-transform.png" alt="DH Transform">
+                  <img class="img-fluid" src="img/portfolio/KUKA/dh-transform-matrix.png" alt="DH Transform Matrix">
+                  <img class="img-fluid" src="img/portfolio/KUKA/dh-transform-0-ee.png" alt="Base to Gripper Transform">
+                  <img class="img-fluid" src="img/portfolio/KUKA/homogeneous_trans.png" alt="Homogeneous Transform">
+                  <img class="img-fluid" src="img/portfolio/KUKA/r_corr.png" alt="Additional Rotations">
+
+                  <h5 class="left-align">4. Decouple Inverse Kinematics Problem</h5>
+                  <p class="justify-align">Inverse Position Kinematics and Inverse Orientation Kinematics:</p>
+                  <img class="img-fluid" src="img/portfolio/KUKA/wc.png" alt="Wrist Center">
+                  <img class="img-fluid" src="img/portfolio/KUKA/theta1.gif" alt="Theta 1 Calculation">
+                  <img class="img-fluid" src="img/portfolio/KUKA/theta2_theta3.png" alt="Theta 2 and Theta 3 Calculation">
+                  <img class="img-fluid" src="img/portfolio/KUKA/r3_6.png" alt="R3_6 Calculation">
+                  <img class="img-fluid" src="img/portfolio/KUKA/extrinsic_rotation.png" alt="Extrinsic Rotation">
+                  <img class="img-fluid" src="img/portfolio/KUKA/alpha.png" alt="Alpha Calculation">
+                  <img class="img-fluid" src="img/portfolio/KUKA/beta.png" alt="Beta Calculation">
+                  <img class="img-fluid" src="img/portfolio/KUKA/gamma.png" alt="Gamma Calculation">
+                  
                   <ul class="list-inline">
-                  <p><a class="boxed" href="https://github.com/mushenghe/final-project-terminator"><font color="red"><b>Github Page</font></a></p> </ul>
+                    <p class="item-intro text-muted"><a class="boxed" href="https://github.com/jasdeepbajaj/KUKA-Pick-and-Place-Robot"><font color="red"><b>Github Page</b></font></a></p>
+                    <li class="left-align">Date: July 2024</li>
+                  </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
-                    Close Project</button>
+                    Close Project
+                  </button>
                 </div>
               </div>
             </div>
@@ -706,6 +730,7 @@
         </div>
       </div>
     </div>
+
 
 
     <!-- KUKA Manipulation -->
